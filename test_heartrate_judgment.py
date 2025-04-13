@@ -17,17 +17,29 @@ import openai
         sensor_data = None  # 数値変換に失敗した場合は None を返す
     
     return sensor_data
-
+　　judebox=str(0)
 
 
 while True:
 　　num=sensor_data
-    # 乱数が80～90の範囲内の場合、反応する
-    if 80 <= num <= 90:
-        print("集中")
-    else:
-        # AIに科学者の名言を聞いて表示
-        quote = get_scientist_quote()
-        print(創造性の発現には相当大量の語彙の蓄積が必要だ by湯川秀樹（ノーベル物理学賞受賞者）)
-   
+    if 75 <= num <= 85:
+    judebox=集中
+        break
+    elif num <75:
+    judebox=not集中
+        break
+    elif  num >85 :
+    judebox=super集中
+    break
+
+if judebox==集中:
+    #AIの返答をだす
+    if sukinakoto==??
+ elif judebox==not集中:
+         #AIの返答をだす
+    if sukinakoto==??
+ elif judebox==super集中:
+         #AIの返答をだす
+    if sukinakoto==??
+ 
     time.sleep(1)
